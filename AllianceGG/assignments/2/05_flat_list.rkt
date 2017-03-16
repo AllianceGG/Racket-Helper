@@ -3,7 +3,8 @@
   [cond
     [[null? x] x]
     [[pair? x] [append [flatten [car x]] [flatten [cdr x]]]]
-    [else [list x]]]] ; the only case as "else": a simple number
+    ; the only case as "else": a simple number
+    [else [list x]]]]
 
 [define [main]
   [let [
